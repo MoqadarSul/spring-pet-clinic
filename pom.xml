@@ -13,6 +13,19 @@
         <version>2.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-release-plugin</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+    </dependencies>
+    <scm>
+        <developerConnection>scm:git:https://github.com/MoqadarSul/spring-pet-clinic.git</developerConnection>
+        <tag>
+            HEAD
+        </tag>
+    </scm>
     <groupId>ca.georgebrown.springclinic</groupId>
     <artifactId>spring-pet-clinic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -26,6 +39,15 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
             </plugin>
         </plugins>
     </build>
